@@ -4,12 +4,29 @@
     <!-- Strings related to login -->
 
     <string name="title_activity_login">Sign in</string>
-    <array name="intro_text">
+    <array name="array_intro_text">
         <item>Create a FREE account\n to access the library website.</item>
         <item>Search and find\n the books you want. Add them to your queue.</item>
         <item>Subscribe to a plan\n and ask for a delivery to home or office.</item>
         <item>Receive home delivery\n - return old books and get new books.</item>
         <item>Read peacefully\n no due dates, no late fees. No reminders!</item>
     </array>
+    <array name="array_cities">
+        <item>Select your city</item>
+        <item>Chennai</item>
+        <item>Coimbatore</item>
+        <item>Gurgaon/Delhi/Noida/NCR</item>
+        <item>Bangalore</item>
+        <item>Pune</item>
+    </array>
+    <array name="array_gender">
+        <item>Select your Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
