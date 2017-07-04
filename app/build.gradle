@@ -4,52 +4,52 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "25.0.3"
-    defaultConfig {
-        applicationId "com.notadeveloper.app.ilovereadin"
-        minSdkVersion 16
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  compileSdkVersion 26
+  buildToolsVersion "25.0.3"
+  defaultConfig {
+    applicationId "com.notadeveloper.app.ilovereadin"
+    minSdkVersion 16
+    targetSdkVersion 26
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
+  }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:design:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.android.support:support-v4:25.3.1'
-    //RxJava
-    compile 'io.reactivex.rxjava2:rxjava:2.1.1'
-    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-    //DEV TOOLS
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
-    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
-    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
-    testCompile 'junit:junit:4.12'
-    //Network
-    compile 'com.squareup.retrofit2:retrofit:2.3.0'
-    compile 'com.squareup.retrofit2:converter-moshi:2.3.0'
-    compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
-    compile 'com.github.bumptech.glide:okhttp3-integration:1.5.0@aar'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC1'
-    compile 'com.facebook.stetho:stetho-okhttp3:1.5.0'
-    compile 'com.facebook.stetho:stetho:1.5.0'
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    exclude group: 'com.android.support', module: 'support-annotations'
+  })
+  compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+  compile 'com.android.support:appcompat-v7:25.3.1'
+  compile 'com.android.support:design:25.3.1'
+  compile 'com.android.support.constraint:constraint-layout:1.0.2'
+  compile 'com.android.support:support-v4:25.3.1'
+  //RxJava
+  compile 'io.reactivex.rxjava2:rxjava:2.1.1'
+  compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+  compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+  //DEV TOOLS
+  debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+  releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+  testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+  testCompile 'junit:junit:4.12'
+  //Network
+  compile 'com.squareup.retrofit2:retrofit:2.3.0'
+  compile 'com.squareup.retrofit2:converter-moshi:2.3.0'
+  compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
+  compile 'com.github.bumptech.glide:okhttp3-integration:1.5.0@aar'
+  annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC1'
+  compile 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+  compile 'com.facebook.stetho:stetho:1.5.0'
 }
 repositories {
-    mavenCentral()
+  mavenCentral()
 }

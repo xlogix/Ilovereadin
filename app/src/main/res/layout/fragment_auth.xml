@@ -5,156 +5,194 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    android:fillViewport="true">
-    <RelativeLayout android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center">
-        <android.support.constraint.ConstraintLayout
+    android:fillViewport="true"
+    >
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      >
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        tools:context="com.notadeveloper.app.ilovereadin.LoginActivity"
+        >
+      <ImageView
+          android:id="@+id/imageView"
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:layout_marginEnd="8dp"
+          android:layout_marginLeft="8dp"
+          android:layout_marginRight="16dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="16dp"
+          android:adjustViewBounds="false"
+          android:src="@drawable/logo"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toLeftOf="@+id/textView"
+          app:layout_constraintTop_toTopOf="parent"
+          />
+
+      <TextView
+          android:id="@+id/textView"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="16dp"
+          android:layout_marginTop="8dp"
+          android:fontFamily="sans-serif-light"
+          android:gravity="center"
+          android:text="The \n ilovereadin' \n library of books "
+
+          android:textColor="@color/white"
+          android:textSize="24sp"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/imageView"
+          />
+
+      <android.support.design.widget.TextInputLayout
+          android:id="@+id/textInputLayoutPass"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="8dp"
+          android:layout_marginLeft="8dp"
+          android:layout_marginRight="8dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="8dp"
+          android:hint="Password"
+          android:theme="@style/EditTextHint"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmail"
+          >
+
+        <EditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-
-            tools:context="com.notadeveloper.app.ilovereadin.LoginActivity">
-            <ImageView android:id="@+id/imageView" android:layout_width="100dp"
-                       android:layout_height="100dp"
-                       android:layout_marginEnd="8dp"
-                       android:layout_marginLeft="8dp"
-                       android:layout_marginRight="16dp"
-                       android:layout_marginStart="8dp" android:layout_marginTop="16dp"
-                       android:adjustViewBounds="false"
-                       android:src="@drawable/logo" app:layout_constraintLeft_toLeftOf="parent"
-                       app:layout_constraintRight_toLeftOf="@+id/textView"
-                       app:layout_constraintTop_toTopOf="parent"/>
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:text="The \n ilovereadin' \n library of books "
-
-                android:textColor="@color/white" android:textSize="24sp"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/imageView"/>
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/textInputLayoutPass"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp" android:layout_marginTop="8dp"
-                android:hint="Password" android:theme="@style/EditTextHint"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmail">
-
-                <EditText
-                    android:id="@+id/password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPassword"
-                    android:textColor="@color/white"/>
-
-            </android.support.design.widget.TextInputLayout>
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/textInputLayoutEmail"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp" android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp" android:hint="Email"
-                android:theme="@style/EditTextHint" app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView">
-                <EditText
-                    android:id="@+id/email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textEmailAddress"
-                    android:textColor="@color/white"/>
-
-            </android.support.design.widget.TextInputLayout>
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/textInputLayoutName"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp" android:hint="Name"
-                android:theme="@style/EditTextHint" app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPass">
-
-                <EditText
-                    android:id="@+id/Name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:textColor="@color/white"/>
-
-            </android.support.design.widget.TextInputLayout>
-            <Spinner android:id="@+id/spinner" style="@style/Spinner"
-                     android:layout_width="0dp"
-                     android:layout_height="wrap_content"
-                     android:layout_marginEnd="8dp"
-                     android:layout_marginLeft="8dp"
-                     android:layout_marginRight="8dp"
-                     android:layout_marginStart="8dp" android:layout_marginTop="16dp"
-                     android:entries="@array/array_gender"
-                     android:spinnerMode="dropdown"
-                     app:layout_constraintHorizontal_bias="0.0"
-                     app:layout_constraintLeft_toLeftOf="parent"
-                     app:layout_constraintRight_toRightOf="parent"
-                     app:layout_constraintTop_toBottomOf="@+id/textInputLayoutName"/>
-            <Spinner android:id="@+id/spinner2" style="@style/Spinner"
-                     android:layout_width="0dp"
-                     android:layout_height="wrap_content"
-                     android:layout_marginEnd="8dp" android:layout_marginLeft="8dp"
-                     android:layout_marginRight="8dp"
-                     android:layout_marginStart="8dp" android:layout_marginTop="16dp"
-                     android:entries="@array/array_cities"
-                     android:spinnerMode="dropdown"
-                     app:layout_constraintHorizontal_bias="0.0"
-                     app:layout_constraintLeft_toLeftOf="parent"
-                     app:layout_constraintRight_toRightOf="parent"
-                     app:layout_constraintTop_toBottomOf="@+id/spinner"/>
-            <CheckBox
-                android:id="@+id/checkBox"
-                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:buttonTint="@color/white"
-                android:text="Agree to terms, privacy policy"
-
-                android:textColor="@color/white"
-                android:theme="@style/myTextStyle"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spinner2"/>
-            <Button android:id="@+id/buttonLogin" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginLeft="8dp" android:layout_marginRight="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
-                    android:filterTouchesWhenObscured="true"
-                    android:text="Create New Free Account"
-                    android:theme="@style/Whitebutton"
-                    app:layout_constraintHorizontal_bias="0.504"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/checkBox"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
             />
-        </android.support.constraint.ConstraintLayout>
-    </RelativeLayout>
+
+      </android.support.design.widget.TextInputLayout>
+      <android.support.design.widget.TextInputLayout
+          android:id="@+id/textInputLayoutEmail"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="8dp"
+          android:layout_marginLeft="8dp"
+          android:layout_marginRight="8dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="16dp"
+          android:hint="Email"
+          android:theme="@style/EditTextHint"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/imageView"
+          >
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white"
+            />
+
+      </android.support.design.widget.TextInputLayout>
+      <android.support.design.widget.TextInputLayout
+          android:id="@+id/textInputLayoutName"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="8dp"
+          android:layout_marginLeft="8dp"
+          android:layout_marginRight="8dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="8dp"
+          android:hint="Name"
+          android:theme="@style/EditTextHint"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPass"
+          >
+
+        <EditText
+            android:id="@+id/Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@color/white"
+            />
+
+      </android.support.design.widget.TextInputLayout>
+      <Spinner
+          android:id="@+id/spinner"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="8dp"
+          android:layout_marginLeft="8dp"
+          android:layout_marginRight="8dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="16dp"
+          android:entries="@array/array_gender"
+          android:spinnerMode="dropdown"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/textInputLayoutName"
+          style="@style/Spinner"
+          />
+      <Spinner
+          android:id="@+id/spinner2"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="8dp"
+          android:layout_marginLeft="8dp"
+          android:layout_marginRight="8dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="16dp"
+          android:entries="@array/array_cities"
+          android:spinnerMode="dropdown"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/spinner"
+          style="@style/Spinner"
+          />
+      <CheckBox
+          android:id="@+id/checkBox"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:buttonTint="@color/white"
+          android:text="Agree to terms, privacy policy"
+
+          android:textColor="@color/white"
+          android:theme="@style/myTextStyle"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/spinner2"
+          />
+      <Button
+          android:id="@+id/buttonLogin"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="8dp"
+          android:layout_marginLeft="8dp"
+          android:layout_marginRight="8dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="16dp"
+          android:filterTouchesWhenObscured="true"
+          android:text="Create New Free Account"
+          android:theme="@style/Whitebutton"
+          app:layout_constraintHorizontal_bias="0.504"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/checkBox"
+          />
+    </android.support.constraint.ConstraintLayout>
+  </RelativeLayout>
 </ScrollView>
